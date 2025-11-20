@@ -1,0 +1,113 @@
+month,destination,country,category_raw,reason_he
+January,"Northern Europe (Norway, Sweden, Finland, Iceland, Greenland)",Northern Europe,Winter / Northern Lights,"לילות ארוכים, שמיים נקיים – עונת שיא לזוהר הצפוני"
+January,Austrian Alps,Austria,Ski / Winter sports,"שלג מצוין אחרי החגים, אתרי סקי פעילים"
+January,Swiss Alps,Switzerland,Ski / Winter sports,"תנאי סקי טובים, חורף יציב"
+January,"Caribbean Islands (Cuba, Dominican Rep., Jamaica, etc.)",Caribbean,Beach / Warm escape,"חם, מעט גשם – מתאים מאוד לחופים"
+January,"Central America (Mexico, Costa Rica, Belize)",Central America,Beach + Nature,"עונה יבשה, ים נעים, טיולי טבע"
+January,"Southeast Asia (Thailand, Cambodia, Vietnam, etc.)",SE Asia,Beach / Culture,"יבש, חמים, שיא עונה נעימה לחופים וטיולים"
+January,South Africa (Cape Town & surrounds),South Africa,City + Beach + Wine,"קיץ מקומי, פחות עומס אחרי החגים"
+January,Australia & New Zealand,Australia / New Zealand,Summer / Outdoors,"אמצע הקיץ – ים, טיולי טבע, טרקים"
+January,Patagonia (Chile & Argentina),Chile / Argentina,Trekking / Mountains,עונה חמה ויבשה לטרקים בפטגוניה
+January,Hawaii,USA (Hawaii),Surf / Beach / Whales,"גלים גבוהים, צפייה בלווייתנים, מחירים נוחים יותר"
+January,Antarctica,Antarctica,Polar / Expedition,"ימים “חמים” יחסית, קרח ים פתוח – תנאים טובים לשייט"
+February,Scandinavia,"Norway, Sweden, Finland",Northern Lights / Winter,עדיין עונה מעולה לאורות הצפון
+February,French Alps,France,Ski,"הרבה שלג, אתרי סקי פעילים"
+February,Utah / Colorado / Vermont,USA,Ski / Winter,אתרי סקי מובילים בצפון אמריקה
+February,Paris,France,City / Romance,"“עיר האהבה” סביב וולנטיין, מחירים נוחים יחסית לחורף"
+February,"Chile & Argentina (Patagonia, wine regions)",Chile / Argentina,Trekking + Wine,"סוף הקיץ בדרום, מזג אוויר מעולה לטיול ויין"
+February,Egypt,Egypt,Culture / Historical,"מזג אוויר נעים לביקור בלוקסור, קהיר, אסואן"
+February,Cape Town,South Africa,City + Beach,"קיץ, פחות אירופאים, מחירים יורדים"
+February,Venice Carnival,Italy,Festival / Culture,קרנבל ונציה – אירוע תרבותי מרכזי
+February,Rio de Janeiro Carnival,Brazil,Festival / Party,הקרנבל הכי גדול בעולם
+February,New Orleans – Mardi Gras,USA,Festival / Culture,מרדי גרא – תהלוכות וחגיגות
+February,China / Singapore (Chinese New Year),China / Singapore,Festival / Culture,ראש השנה הסיני – חגיגות ענק
+March,Italy & Mediterranean countries,"Italy, Greece, Spain, etc.",City + Mild weather,"מתחמם, עונה כתף נעימה ללא עומס"
+March,Egypt & Middle East,"Egypt, Jordan, Israel, etc.",Culture / Desert,"חם ונעים ביום, קריר בערב"
+March,Southeast Asia,"Thailand, Vietnam, etc.",Beach / Culture,"עדיין חם ויחסית יבש, קצת פחות צפוף מבינואר–פברואר"
+March,India – Holi Festival,"India (Mumbai, etc.)",Festival / Culture,"חג ההולי – פסטיבל הצבעים, ימים חמים ולילות נוחים"
+March,Maldives,Maldives,Beach / Honeymoon,"מים חמימים, שמיים כחולים"
+March,USA – coastal cities,"New York, Boston, San Francisco",City,"מזג אוויר נעים, תחילת אביב"
+March,Caribbean + Cuba,"Caribbean, Cuba",Beach,עדיין עונה טובה לחופים
+March,Colombia – Cartagena,Colombia,Beach + Nightlife,"חופים יפים, פחות צפוף, חיי לילה טובים"
+March,Galápagos,Ecuador (Galapagos),Wildlife / Unique nature,"תחילת עונת החיזור של מינים מקומיים, גשם קצר וזול יותר"
+April,"Crete, Cyprus, Malta",Greece / Cyprus / Malta,Beach + Relax,"מזג אוויר מעולה, עונה שקטה וזולה לפני הקיץ"
+April,Canary Islands,Spain (Canaries),Beach / Island,"חמימים, נעימים, פחות עומס"
+April,"Morocco, Tunisia, Egypt",North Africa,Culture / Desert,אביב נעים בצפון אפריקה
+April,Middle East,"Israel, Jordan, etc.",Culture + Nature,יבש ונעים לטיולים
+April,Victoria Falls,Zambia / Zimbabwe,Waterfall / Adventure,"סוף עונה רטובה – פחות רסס, אפשר בראינינג וג’אמפ"
+April,Namibia,Namibia,Desert / Landscape,חום מתון – מתאים למדבר
+April,Japan – cherry blossoms,Japan,Seasonal / Blossoms,שיא פריחת הסאקורה
+April,Netherlands – tulips,Netherlands,Seasonal / Flowers,שדות הצבעונים בשיאם
+April,Washington D.C. – cherry blossoms,USA,City + Blossoms,פסטיבל הדובדבן המפורסם
+April,"Caribbean (Cuba, DR, Jamaica, Puerto Rico)",Caribbean,Beach,מזג אוויר מעולה לחופים
+April,New Zealand – autumn vineyards,New Zealand,Wine / Scenery,תחילת הסתיו – כרמים בצבעים מרהיבים
+May,UK & most of Europe,"UK, France, etc.",City / Countryside,"קיץ “רך”, חמים, לפני עומסי יולי–אוגוסט"
+May,"Croatia, Hungary, Italy","Croatia, Hungary, Italy",City + Coast,"עדיין עונה כתף, זול יותר ופחות צפוף"
+May,Portugal + Mediterranean,"Portugal, Spain, Greece",Beach / City,"כבר חם, אבל עדיין לא שיא קיץ"
+May,Prague – Spring Music Festival,Czech Republic,Culture / Festival,פסטיבל אביב בן 3 שבועות
+May,Nepal & Bhutan,"Nepal, Bhutan",Trekking / Himalaya,"מזג אוויר מעולה לטרקים (Everest Base Camp, Annapurna)"
+May,Peru – Inca Trail,Peru,Trekking / Culture,אחת העונות הכי טובות לטרק האינקה ולביקור בקוסקו
+May,Indonesia – Bali,Indonesia (Bali),Beach / Island,"יוצאת מהעונה הרטובה – חם, גשם קצר, עדיין עונה כתף"
+May,USA & Canada – cities + Yellowstone,USA / Canada,National Parks / City,"מזג אוויר טוב, פחות תיירים בפארקים"
+May,Namibia – Sossusvlei,Namibia,Desert / Photography,תנאים מושלמים לצילום דיונות ועצי המוות
+June,Northern Europe – midnight sun,"Iceland, Sweden, Norway, Finland",Seasonal / Midnight sun,"שמש חצות, ימים ארוכים מאד"
+June,Pride festivals worldwide,Various cities,Festival / City,הרבה ערים חגיגות Pride ביוני
+June,Greek Islands & Croatia,"Greece, Croatia",Beach / Sailing,תחילת שיא עונת שייט באיים
+June,Peru (still),Peru,Trekking,"יבש, מעט קריר – טוב לטרקים"
+June,Brazil,Brazil,City + Nature,"טמפ’ נוחות, יבש, דרום קצת קריר"
+June,Iguazu Falls,Brazil / Argentina,Waterfalls / Nature,עונה נעימה לביקור
+June,Canada – festivals,Canada,City / Festivals,"Canada Day, פסטיבל ג’אז במונטריאול"
+June,Tanzania + Zanzibar,Tanzania,Safari + Beach,אחרי הגשמים – נדידת הגנו וחופים בזנזיבר
+June,Arctic cruises,Arctic region,Polar / Wildlife,"ימים ארוכים, לווייתני מינק והמפבק"
+July,Europe (general),Europe-wide,City / Beach,"שיא הקיץ, המון פסטיבלים ואירועים"
+July,USA – outdoors & 4th of July,USA,City + Outdoors,"חגיגות 4 ביולי, טיולים בטבע"
+July,"Indonesia (Bali, East Java, Komodo)",Indonesia,Diving / Volcano / Islands,"יבש, שטוף שמש – מתאים לצלילה וטיולי הרי געש"
+July,Seychelles,Seychelles,Beach / Water sports,"סוף העונה הרטובה, פעילות ימית ענפה"
+July,Kenya – Maasai Mara,Kenya,Safari / Great Migration,תחילת נדידת הגנו הגדולה
+July,Tanzania – Serengeti,Tanzania,Safari / Great Migration,"המשך הנדידה, צפיפות חיות מדהימה"
+July,Fiji,Fiji,Beach / Island,"מזג אוויר נעים, פסטיבל Bula ביולי"
+July,Peru & Bolivia,Peru / Bolivia,Trekking / Culture,"יבש, קריר – טוב לטרקים וטיול ערים"
+August,Mediterranean coasts,"Italy, Spain, Portugal, Greece",Beach,"חוף, חום, עונת שיא תיירותית"
+August,Croatia – sailing,Croatia,Sailing / Beach,"הפלגות, ים חם"
+August,Scotland – Edinburgh Fringe,UK (Scotland),Festival / Arts,פסטיבל האומנויות הגדול בעולם
+August,Peru,Peru,Trekking,קר אבל יבש למטיילים שלא מפחדים מקור
+August,Tibet,China (Tibet),High-altitude trekking,תנאי הליכה טובים
+August,Kenya (end of migration),Kenya,Safari,סוף הנדידה הגדולה – עדיין מרשים
+September,Germany & Austria – Oktoberfest (starts late Sept),"Germany, Austria",Beer Festival,תחילת אוקטוברפסט
+September,Georgia – Tbilisi,Georgia,City / Architecture,"מזג אוויר נעים, עיר מעורבת סגנונות"
+September,India (post-monsoon),India,Culture / City,"סוף המונסון, מזג אוויר נוח לפני החורף"
+September,Himalaya road-trip,India / Nepal / etc.,Road-trip / Mountains,כבישים פתוחים לפני השלג
+September,Portugal & Mediterranean,"Portugal, Greece, etc.",Beach / City,"עדיין חמים, פחות תיירים ומחירים נמוכים"
+September,"Southern Africa (Namibia, Botswana, etc.)","Namibia, Botswana, Zambia, Zimbabwe, Mozambique",Safari / Nature,"יבש, שמש חורפית, לילות קרירים"
+September,Iran,Iran,Culture / Off the beaten path,"מזג אוויר מתון, פחות חם"
+September,Peru & Nepal (trekking),"Peru, Nepal",Trekking,עונת הליכה מעולה – גם באלפים והאנדים
+September,China & Japan – fall hikes,"China, Japan",Hiking / Fall weather,מזג אוויר סתווי מתון
+October,Munich – Oktoberfest,Germany,Beer Festival,שיא הפסטיבל
+October,"Argentina, Uruguay, Chile",South America,Spring / City + Nature,"יבש, מתחמם – לפני העומס הקייצי"
+October,Turkey – Antalya,Turkey,Beach + Culture,"שמש כמעט בטוחה, מחירים טובים"
+October,Cyprus,Cyprus,Beach,"סוף עונת הרחצה, עדיין חמים"
+October,Oman & UAE,"Oman, UAE",Desert / City,"חם אבל לא קיצוני, עונה טובה לטיול"
+October,Ethiopia – Simien Mountains,Ethiopia,Trekking / Wildlife,"הרים ירוקים אחרי הגשמים, הרבה חיות"
+October,Victoria Falls – Devil’s Pool,Zambia,Adventure / Waterfall,גובה מים נמוך – פתוח לבריכה המפורסמת
+October,Madagascar,Madagascar,Wildlife / Beach,"גורים של למורים, מזג אוויר לחוף"
+October,Japan,Japan,Autumn foliage,"שלכת מרהיבה, גשם כמעט נגמר"
+November,"Cuba – Havana, Trinidad, Viñales",Cuba,City + Beach,"תחילת העונה היבשה, טמפ’ נוחות"
+November,Caribbean Islands,Caribbean,Beach,"סוף עונת ההוריקנים, מזג אוויר טוב"
+November,Prague,Czech Republic,City / Old town,"חורף בתחילתו, אווירה רומנטית ואדריכלות"
+November,Chiang Mai – Loi Krathong & Yi Peng,Thailand (Chiang Mai),Festival / Culture,פסטיבלי הפנסים – חוויה חזותית חזקה
+November,Agra – Taj Mahal,India,Culture / Iconic site,"תחילת עונת השיא, אפשר להקדים את העומס בסיור זריחה"
+November,Morocco,Morocco,Culture / Desert,"מזג אוויר טוב לסהרה, מדינות, שווקים"
+November,"USA – Thanksgiving (NYC, Colorado)",USA,City / Family holiday,"חג ההודיה, מצעדי חג, סקי ראשוני"
+November,Hawaii – surf season,USA (Hawaii),Surf / Beach,תחרויות גלישה גדולות בצפון אוהאיו
+November,Antarctica,Antarctica,Polar / Expedition,תחילת הקיץ הדרומי – שוב נגיש
+December,Scandinavia,"Norway, Sweden, Finland",Northern Lights / Winter,"חורף מלא, אורות הצפון"
+December,"Alps (Switzerland, Austria, France Pyrenees)","Switzerland, Austria, France",Ski,פתיחת עונת הסקי המלאה
+December,Banff National Park,Canada,Winter sports / Nature,"סקי, סנובורד, מזחלות כלבים, אגמים קפואים"
+December,Christmas markets,"France, Germany, Czech Republic, Hungary",City / Markets,שווקי חג מולד מפורסמים באירופה
+December,Southeast Asia,"Thailand, Cambodia, Vietnam, Laos, Philippines",Beach / Warm winter,"חם, יבש – בריחה מהקור האירופי"
+December,Australia & New Zealand,"Australia, New Zealand",Summer / Outdoors,"אמצע הקיץ, ימים ארוכים וחמים"
+December,Caribbean,Caribbean,Beach,"חם, יבש – עונת שיא חמימה"
+December,Central America – Belize,Belize,Diving / Beach + Mayan sites,"צלילה מעולה, אתרים מאיה, קיץ מקומי"
+December,Patagonia (again),"Argentina, Chile",Trekking / Summer,שיא העונה היפה ביותר שם
+December,Uruguay – Punta del Este,Uruguay,Beach / City,“מונקו של הדרום” בשיאו
+December,New Year’s Eve cities,"Rio, Edinburgh, New York, Dubai, Sydney, Miami",Party / Fireworks,מסיבות ענק וזיקוקים לסילבסטר

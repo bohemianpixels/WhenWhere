@@ -1,0 +1,1004 @@
+/* ============================================
+   CSS VARIABLES - Boarding Pass Aesthetic
+   ============================================ */
+:root {
+  /* Base Colors - Minimal white/black palette */
+  --bg-white: #ffffff; /* Pure white background */
+  --bg-warm: #fefefe; /* Slightly warm white (optional) */
+  --text-black: #1a1a1a; /* Very dark gray/black for text */
+  --text-gray: #4a4a4a; /* Medium gray for secondary text */
+  --text-light: #8a8a8a; /* Light gray for subtle text */
+  
+  /* Accent Colors - Travel sticker/boarding pass highlights */
+  --accent-orange: #e67e22; /* Muted orange - use sparingly for selected states */
+  --accent-blue: #3498db; /* Muted blue - use sparingly for accents */
+  --accent-red: #c0392b; /* Muted red - optional accent */
+  
+  /* Borders - Thin black lines like boarding passes */
+  --border-black: #1a1a1a;
+  --border-gray: #cccccc;
+  
+  /* Typography */
+  /* To change fonts: Update the Google Fonts links in index.html, then update these variables */
+  --font-main: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg-white);
+  color: var(--text-black);
+  line-height: 1.6;
+}
+
+/* ============================================
+   LANDING SCREEN - Boarding Pass Aesthetic
+   ============================================ */
+.landing-screen {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--bg-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Background Image */
+.landing-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/Background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+  opacity: 1; /* 100% opacity - fully visible */
+}
+
+/* Landing Content */
+.landing-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: var(--spacing-lg);
+  max-width: 700px;
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.landing-title {
+  font-family: var(--font-main);
+  /* TO CHANGE TITLE SIZE: Modify the font-size value below */
+  /* Current: 4.5rem - increase for larger, decrease for smaller */
+  font-size: 4.5rem;
+  font-weight: 100; /* Super light weight (100 = thin, 200 = extra light) */
+  color: var(--text-black);
+  margin-bottom: var(--spacing-sm);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.landing-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-gray);
+  margin-bottom: var(--spacing-xl);
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+/* Landing Buttons - Main CTA buttons */
+.landing-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.landing-button {
+  padding: 0.9rem 2.8rem;
+  border-radius: 9999px;
+  border: 1px solid #111;
+  background: #ffffffcc;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.15s ease;
+  color: var(--text-black);
+  text-align: center;
+  position: relative;
+}
+
+.landing-button:hover {
+  background: #111;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.landing-button:active {
+  transform: translateY(0);
+}
+
+/* ============================================
+   WHEN SCREEN - Map as full-screen background
+   ============================================ */
+.when-screen {
+  position: relative;
+  min-height: 100vh;
+  background: transparent;
+  overflow: hidden;
+}
+
+/* Map background - full screen from top to bottom */
+.when-map-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+
+/* Content floating on top of map */
+.when-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  padding: var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  max-width: 1200px;
+  margin: 0 auto;
+  background: transparent;
+}
+
+.when-map {
+  width: 100%;
+  height: 100%;
+}
+
+/* Make Leaflet container transparent */
+.when-map-bg .leaflet-container {
+  background: transparent;
+}
+
+
+.when-content .back-button {
+  align-self: flex-start;
+  margin-bottom: var(--spacing-sm);
+}
+
+.when-month-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.5rem;
+  direction: rtl; /* Right-to-left for Hebrew */
+}
+
+.when-month-button {
+  border-radius: 9999px;
+  border: 1px solid var(--border-black);
+  background: var(--bg-white);
+  padding: 0.8rem 1rem;
+  font-family: var(--font-main);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+  color: var(--text-black);
+}
+
+.when-month-button:hover {
+  background: #111;
+  color: #fff;
+}
+
+.when-month-button.selected {
+  background: #111;
+  border-color: #111;
+  color: #fff;
+  font-weight: 600;
+}
+
+.when-map-placeholder,
+.when-map-error {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-main);
+  color: var(--text-gray);
+  background: var(--bg-white);
+  text-align: center;
+  padding: var(--spacing-md);
+  z-index: 1;
+}
+
+.when-map-error {
+  color: var(--accent-red);
+}
+
+.country-label-icon {
+  background: none;
+  border: none;
+  transform: translate(-50%, -50%);
+}
+
+.country-label-icon span {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #111;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid #111;
+  border-radius: 9999px;
+  padding: 0.15rem 0.55rem;
+  white-space: nowrap;
+}
+
+/* ============================================
+   APP LAYOUT - Map Screen
+   ============================================ */
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--bg-white);
+}
+
+.app-header {
+  background: var(--bg-white);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-bottom: 2px solid var(--border-black);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-title {
+  font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 100; /* Super light weight (100 = thin, 200 = extra light) */
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  /* TO CHANGE TITLE SIZE: Modify the clamp values below */
+  /* Format: clamp(min-size, preferred-size, max-size) */
+  /* Example: clamp(2rem, 3vw, 2.5rem) for smaller, or clamp(3rem, 5vw, 4.5rem) for larger */
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  color: var(--text-black);
+}
+
+.back-to-landing-button {
+  position: absolute;
+  left: var(--spacing-lg);
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--bg-white);
+  border: 1px solid var(--border-black);
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-family: var(--font-main);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-black);
+  transition: all 0.2s;
+}
+
+.back-to-landing-button:hover {
+  background: var(--text-black);
+  color: var(--bg-white);
+}
+
+.app-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+}
+
+/* ============================================
+   SIDEBAR - Month & Category Selectors
+   ============================================ */
+.sidebar {
+  width: 280px;
+  background: var(--bg-white);
+  border: 1px solid var(--border-gray);
+  padding: var(--spacing-md);
+  overflow-y: auto;
+}
+
+.section-title {
+  font-family: var(--font-main);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-black);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.75rem;
+}
+
+/* Month Selector - Ticket segment style */
+.month-selector {
+  margin-bottom: var(--spacing-lg);
+}
+
+.month-chips {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.month-chip {
+  padding: 0.75rem 1rem;
+  background: var(--bg-white);
+  border: 1px solid var(--border-black);
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: var(--font-main);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: left;
+  transition: all 0.2s;
+  color: var(--text-black);
+}
+
+.month-chip:hover {
+  background: var(--text-black);
+  color: var(--bg-white);
+}
+
+.month-chip.active {
+  background: var(--accent-orange);
+  color: var(--bg-white);
+  border-color: var(--accent-orange);
+  font-weight: 600;
+}
+
+/* Category Filter - Ticket segment style */
+.category-filter {
+  margin-top: var(--spacing-lg);
+}
+
+.category-chips {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.category-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: var(--bg-white);
+  border: 1px solid var(--border-black);
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: var(--font-main);
+  font-size: 0.85rem;
+  transition: all 0.2s;
+  color: var(--text-black);
+}
+
+.category-chip:hover {
+  background: var(--text-black);
+  color: var(--bg-white);
+}
+
+.category-chip.active {
+  background: var(--accent-blue);
+  color: var(--bg-white);
+  border-color: var(--accent-blue);
+  font-weight: 600;
+}
+
+.category-icon {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.category-label {
+  font-weight: 500;
+}
+
+/* ============================================
+   MAP CONTAINER
+   ============================================ */
+.main-content {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.map-wrapper {
+  flex: 1;
+  border: 1px solid var(--border-black);
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--bg-white);
+}
+
+.world-map-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* Custom Markers */
+.custom-marker {
+  background: transparent !important;
+  border: none !important;
+}
+
+.marker-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid var(--bg-white);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.marker-emoji {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.leaflet-marker-icon:hover .marker-circle {
+  transform: scale(1.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   DESTINATION PANEL - Boarding Pass Card
+   ============================================ */
+.destination-panel {
+  width: 380px;
+  background: var(--bg-white);
+  border-left: 1px solid var(--border-black);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-y: auto;
+}
+
+.close-button {
+  position: absolute;
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
+  background: var(--bg-white);
+  border: 1px solid var(--border-black);
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--text-black);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  font-family: var(--font-main);
+  font-weight: 500;
+}
+
+.close-button:hover {
+  background: var(--text-black);
+  color: var(--bg-white);
+}
+
+.panel-content {
+  padding: var(--spacing-lg);
+  padding-top: 3rem;
+}
+
+.panel-header {
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--border-gray);
+  position: relative;
+}
+
+/* Fake flight code label - Boarding pass style */
+.panel-header::before {
+  content: 'FLIGHT CODE';
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--text-light);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.destination-title {
+  font-family: var(--font-main);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--text-black);
+  letter-spacing: -0.02em;
+}
+
+.panel-header .country {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-gray);
+  margin-bottom: var(--spacing-sm);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.month-category {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.month-badge,
+.category-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid var(--border-black);
+  font-family: var(--font-mono);
+  letter-spacing: 0.05em;
+}
+
+.month-badge {
+  background: var(--accent-orange);
+  color: var(--bg-white);
+  border-color: var(--accent-orange);
+}
+
+.category-badge {
+  background: var(--bg-white);
+  color: var(--text-black);
+}
+
+.panel-body {
+  margin-bottom: var(--spacing-lg);
+}
+
+.reason-hebrew {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-black);
+  padding: var(--spacing-md);
+  background: var(--bg-warm);
+  border: 1px solid var(--border-gray);
+  border-radius: 4px;
+  text-align: right;
+  font-family: var(--font-main);
+}
+
+.panel-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--border-gray);
+}
+
+.nav-arrow {
+  width: 40px;
+  height: 40px;
+  background: var(--bg-white);
+  border: 1px solid var(--border-black);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-black);
+  font-weight: 600;
+  font-family: var(--font-main);
+}
+
+.nav-arrow:hover:not(:disabled) {
+  background: var(--text-black);
+  color: var(--bg-white);
+}
+
+.nav-arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.item-counter {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-gray);
+  letter-spacing: 0.05em;
+}
+
+/* ============================================
+   CHOOSE SCREENS (Month & Category)
+   ============================================ */
+.choose-screen {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: var(--bg-white);
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.back-button {
+  position: absolute;
+  top: var(--spacing-lg);
+  left: var(--spacing-lg);
+  width: 44px;
+  height: 44px;
+  background: var(--bg-white);
+  border: 1px solid var(--border-black);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-black);
+  font-weight: 600;
+  font-family: var(--font-main);
+  z-index: 100;
+}
+
+.back-button:hover {
+  background: var(--text-black);
+  color: var(--bg-white);
+}
+
+.choose-content {
+  width: 100%;
+  max-width: 900px;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.choose-title {
+  font-family: var(--font-main);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-black);
+  margin-bottom: var(--spacing-sm);
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+.month-grid,
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--spacing-sm);
+  width: 100%;
+  max-width: 800px;
+}
+
+.month-option,
+.category-option {
+  padding: var(--spacing-md) var(--spacing-sm);
+  background: var(--bg-white);
+  border: 1px solid var(--border-black);
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: var(--font-main);
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  color: var(--text-black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.month-option:hover,
+.category-option:hover {
+  background: var(--text-black);
+  color: var(--bg-white);
+}
+
+.month-option.selected,
+.category-option.selected {
+  background: var(--accent-orange);
+  border-color: var(--accent-orange);
+  color: var(--bg-white);
+  font-weight: 600;
+}
+
+.category-option.selected {
+  background: var(--accent-blue);
+  border-color: var(--accent-blue);
+}
+
+.category-option-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.category-option-label {
+  font-size: 0.9rem;
+}
+
+.continue-button {
+  padding: 1rem 3rem;
+  background: var(--text-black);
+  border: 1px solid var(--text-black);
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: var(--font-main);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--bg-white);
+  transition: all 0.2s;
+  margin-top: var(--spacing-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.continue-button:hover:not(:disabled) {
+  background: var(--accent-orange);
+  border-color: var(--accent-orange);
+}
+
+.continue-button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* ============================================
+   LOADING & ERROR STATES
+   ============================================ */
+.app-loading,
+.app-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.5rem;
+  font-family: var(--font-main);
+  color: var(--text-gray);
+  background: var(--bg-white);
+}
+
+.app-error {
+  color: var(--accent-red);
+}
+
+/* ============================================
+   POPUP STYLING
+   ============================================ */
+.custom-popup .leaflet-popup-content-wrapper {
+  background: var(--bg-white);
+  border: 1px solid var(--border-black);
+  border-radius: 4px;
+  font-family: var(--font-main);
+}
+
+.custom-popup .leaflet-popup-content {
+  margin: var(--spacing-sm);
+  font-size: 0.9rem;
+  color: var(--text-black);
+}
+
+.custom-popup .leaflet-popup-tip {
+  background: var(--bg-white);
+  border: 1px solid var(--border-black);
+}
+
+/* ============================================
+   RESPONSIVE - MOBILE STYLES
+   ============================================ */
+@media (max-width: 768px) {
+  .landing-title {
+    font-size: 3rem;
+  }
+
+  .landing-subtitle {
+    font-size: 0.8rem;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .landing-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .landing-button {
+    width: 100%;
+    min-width: auto;
+    font-size: 1rem;
+    padding: 0.9rem 2rem;
+  }
+
+  .background-text {
+    font-size: 8rem;
+  }
+
+  .stamp {
+    width: 80px;
+    height: 80px;
+  }
+
+  .stamp-code {
+    font-size: 0.9rem;
+  }
+
+  .stamp-date {
+    font-size: 0.6rem;
+  }
+
+  .barcode-bottom {
+    width: 150px;
+    height: 30px;
+  }
+
+  .barcode-side {
+    width: 30px;
+    height: 100px;
+  }
+
+  .choose-screen {
+    padding: var(--spacing-sm);
+  }
+
+  .back-button {
+    top: var(--spacing-sm);
+    left: var(--spacing-sm);
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  .choose-content {
+    margin-top: 3rem;
+  }
+
+  .choose-title {
+    font-size: 1.5rem;
+  }
+
+  .month-grid,
+  .category-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .month-option,
+  .category-option {
+    padding: 1rem 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .category-option-icon {
+    font-size: 1.5rem;
+  }
+
+  .continue-button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .when-content {
+    padding: var(--spacing-md);
+  }
+
+  .when-month-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .back-to-landing-button {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    margin-bottom: 0.5rem;
+  }
+
+  .app-content {
+    flex-direction: column;
+    padding: var(--spacing-sm);
+    gap: var(--spacing-sm);
+  }
+
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border-black);
+    padding: var(--spacing-sm);
+  }
+
+  .destination-panel {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-height: 75vh;
+    border-left: none;
+    border-top: 1px solid var(--border-black);
+    z-index: 1000;
+  }
+
+  .app-title {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .landing-title {
+    font-size: 2.5rem;
+  }
+
+  .ticket-button {
+    font-size: 1.3rem;
+    padding: 1rem 1.5rem;
+  }
+
+  .when-month-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
