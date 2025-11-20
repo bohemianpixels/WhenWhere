@@ -123,6 +123,7 @@ body {
   gap: var(--spacing-md);
   justify-content: center;
   flex-wrap: wrap;
+  direction: rtl; /* RTL for Hebrew - "מתי" on right, "לאן" on left on desktop */
 }
 
 .landing-button {
@@ -134,17 +135,40 @@ body {
   font-size: 1rem;
   font-weight: 400;
   cursor: pointer;
-  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.15s ease;
+  transition: all 0.3s ease;
   color: var(--text-black);
   text-align: center;
   position: relative;
 }
 
-.landing-button:hover {
-  background: #111;
+/* Neon hover effect for "מתי" (When) button - Cyan/Blue neon */
+.landing-button-when:hover {
+  background: #00f0ff;
+  color: #000;
+  border-color: #00f0ff;
+  transform: translateY(-2px);
+  box-shadow: 
+    0 4px 20px rgba(0, 240, 255, 0.6),
+    0 0 30px rgba(0, 240, 255, 0.4),
+    inset 0 0 20px rgba(0, 240, 255, 0.2);
+  text-shadow: 
+    0 0 10px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(0, 240, 255, 0.8);
+}
+
+/* Neon hover effect for "לאן" (Where) button - Pink/Magenta neon */
+.landing-button-where:hover {
+  background: #ff00ff;
   color: #fff;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  border-color: #ff00ff;
+  transform: translateY(-2px);
+  box-shadow: 
+    0 4px 20px rgba(255, 0, 255, 0.6),
+    0 0 30px rgba(255, 0, 255, 0.4),
+    inset 0 0 20px rgba(255, 0, 255, 0.2);
+  text-shadow: 
+    0 0 10px rgba(255, 255, 255, 0.8),
+    0 0 20px rgba(255, 0, 255, 0.8);
 }
 
 .landing-button:active {
@@ -865,6 +889,7 @@ body {
   .landing-buttons {
     flex-direction: column;
     width: 100%;
+    direction: ltr; /* Override RTL on mobile - DOM order determines stacking: "מתי" (first) on top */
   }
 
   .landing-button {

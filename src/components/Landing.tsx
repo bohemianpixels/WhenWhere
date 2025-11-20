@@ -16,11 +16,13 @@ export function Landing({ onChooseMonth, onChooseCategory }: LandingProps) {
           החופשה שלך מתחילה כאן ועכשיו
         </p>
         <div className="landing-buttons">
-          <button className="landing-button" onClick={onChooseCategory} dir="rtl">
-            לאן
-          </button>
-          <button className="landing-button" onClick={onChooseMonth} dir="rtl">
+          {/* WHEN button first in the DOM */}
+          <button className="landing-button landing-button-when" onClick={onChooseMonth} dir="rtl">
             מתי
+          </button>
+          {/* WHERE button second in the DOM */}
+          <button className="landing-button landing-button-where" onClick={onChooseCategory} dir="rtl">
+            לאן
           </button>
         </div>
       </div>
